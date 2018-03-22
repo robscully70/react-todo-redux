@@ -15,10 +15,6 @@ var TodoApp = React.createClass({
       todos: TodoAPI.getTodos()
     };
   },
-  componentDidMount(){
-    fetch('https://randomuser.me/api/')
-      .then(console.log("results: " + {results}));
-  },
   componentDidUpdate: function () {
     TodoAPI.setTodos(this.state.todos);
   },

@@ -5,6 +5,13 @@ var $ = require('jQuery');
 
 var TodoApp = require('TodoApp');
 
+var actions = require('actions');
+var store = require('configureStore').configure();
+
+store.subscribe(() => {
+  console.log('New state  ' +store.getState())
+})
+
 // Load foundation
 require('style!css!foundation-sites/dist/css/foundation.min.css')
 
